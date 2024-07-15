@@ -5,7 +5,7 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.
 RUN unzip apache-tomcat-9.0.90.zip
 RUN mv apache-tomcat-9.0.90 /mnt/tomcat/
 RUN chmod 770 /mnt/tomcat/bin/catalina.sh
-COPY student-ui /app
+COPY . /app
 WORKDIR /app
 RUN mvn clean package
 RUN cp target/*.war /mnt/tomcat/webapps/student.war
