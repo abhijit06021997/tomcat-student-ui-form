@@ -10,5 +10,4 @@ WORKDIR /app
 RUN mvn clean package
 RUN cp target/*.war /mnt/tomcat/webapps/student.war
 EXPOSE 8080
-CMD ["/mnt/tomcat/bin/catalina.sh", "run"]
-~                                          
+CMD ["/mnt/tomcat/bin/catalina.sh", "run"]                                        
