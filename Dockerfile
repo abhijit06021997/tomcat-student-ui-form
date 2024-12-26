@@ -1,9 +1,9 @@
 FROM amazonlinux
 LABEL maintainer="Abhijit Ramteke<abhijitramteke345@gmail.com>"
 RUN yum update -y && yum install -y java-17-amazon-corretto.x86_64 -y && yum install -y unzip && yum install -y wget && yum install -y maven
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.1/bin/apache-tomcat-11.0.1.zip
-RUN unzip apache-tomcat-11.0.1
-RUN mv apache-tomcat-11.0.1 /mnt/tomcat/
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.2/bin/apache-tomcat-11.0.2.zip
+RUN unzip apache-tomcat-11.0.2
+RUN mv apache-tomcat-11.0.2 /mnt/tomcat/
 RUN chmod 770 /mnt/tomcat/bin/catalina.sh
 COPY . /app
 WORKDIR /app
